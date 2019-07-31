@@ -14,30 +14,6 @@ document.getElementById("list").addEventListener("click", function(e) {
     }
   });
 
-
-  //FITUR DELETE LIST
-//   document.getElementById("list").addEventListener("click", function(e) {
-   
-//     if (e.target && e.target.matches("button.del")) {
-//      console.log(e.target.index);
-//     }
-//   });
-
-// for(i=0; i < dels.length; i++) {
-
-//     dels[i].index = i;
-  
-//     dels[i].addEventListener('click', function(e) {
-      
-//     console.log(e.target.index); 
-//     var parent = document.getElementById("list");
-//     var childList = document.getElementsByClassName("item")[e.target.index];
-//     var childBtn = document.getElementsByClassName("del")[e.target.index];
-//     parent.removeChild(childList);
-//     parent.removeChild(childBtn);
-//     },false);
-//   }
-
 for(var i = 0; i < dels.length; i++){
   
 	dels[i].addEventListener("click", removeParent, false);
@@ -90,38 +66,5 @@ function tambahElemen(){
         input.value="";
 }
 
-
-
-
-
-
-//VERSI ANDREI
-
-
-
-// btn.addEventListener("click", function(){
-//     if(inputLength() > 0){ //kenapa harus ditambah dengan .length? karen input.value itu return string, sedangkan pembandingnaya adalah angka.
-//         tambahElemen();
-//     }else{
-//         window.alert("Data tidak boleh kosong!");
-//     }
-// });
-
-// input.addEventListener("keypress", function(event){
-//     if(inputLength() > 0 && event.keyCode === 13){ //kenapa harus ditambah dengan .length? karen input.value itu return string, sedangkan pembandingnaya adalah angka.
-//         tambahElemen();
-//     }else{
-//         window.alert("Data tidak boleh kosong!");
-//     }
-// });
-
-// function inputLength(){
-//     return input.value.length;
-// }
-
-// function tambahElemen(){
-//         var li = document.createElement("li");
-//         li.appendChild(document.createTextNode(input.value)); //untuk mendapat value dari elemen tsb.
-//         ul.appendChild(li);
-//         input.value="";
-// }
+//menghiddenkan bagian completed
+document.getElementById("completed").style.display = "none";
